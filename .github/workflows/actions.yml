@@ -8,14 +8,14 @@ on:
     branches: [ dev ]
   pull_request:
     branches: [ dev ]
-    
+
+defaults:
+  run:
+    working-directory: ./Backend
 jobs:
   Test-school-finder:
     name: Test School Finder Backend Code
     runs-on: ubuntu-latest
-    
-    env:
-      working-directory: ./Backend
     
     strategy:
       matrix:
@@ -28,7 +28,6 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node-version }}
-    - working-directory: ${{env.working-directory}}
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
