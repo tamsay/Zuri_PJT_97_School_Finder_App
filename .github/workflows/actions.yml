@@ -10,8 +10,8 @@ on:
     branches: [ dev ]
 
 jobs:
-  build:
-
+  Test-school-finder:
+    name: Test School Finder Backend Code
     runs-on: ubuntu-latest
 
     strategy:
