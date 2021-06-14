@@ -1,5 +1,7 @@
-// test cases come here
-// jest will be used and mongomemoryserver
-// all routes will be tested
-// additional tests
-// final
+/* eslint-disable no-undef */
+
+describe('School Finder Tests', ()=>{
+	test('sample test', ()=>{
+		expect(1).toBe(1);
+	});
+});
